@@ -1,0 +1,602 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section-p1 {
+  padding: 40px 40px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+button.normal {
+  font-size: 20px;
+  font-weight: 300;
+  padding: 20px 50px;
+  color: #000;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
+button.white {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #000;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #000;
+  outline: none;
+  transition: 0.2s;
+}
+
+body {
+  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+button:hover .arrow {
+  transform: translateX(0.25rem);
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background-color: #fff;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+#header .logo {
+  width: 100px;
+}
+#header .mobile {
+  display: none;
+  align-items: center;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#navbar li {
+  list-style: none;
+  padding: 0 10px;
+}
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+#navbar #close {
+  display: none;
+}
+
+.active {
+  right: 0px !important;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 90vh;
+  background-image: url(img/hero-banner.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  padding: 0 100px;
+}
+#hero h2 {
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+#hero h2 > strong {
+  display: block;
+}
+#hero p {
+  line-height: 1.8;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+#hero button {
+  background-color: hsl(5, 100%, 73%);
+  color: #fff;
+}
+
+#collection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+#collection .card1 {
+  background: url(img/collection-1.jpg);
+}
+#collection .card2 {
+  background: url(img/collection-2.jpg);
+}
+#collection .card3 {
+  background: url(img/collection-3.jpg);
+}
+#collection .card {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 360px;
+  width: 360px;
+  align-items: center;
+  padding: 45px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#collection .card h3 {
+  font-weight: 600;
+  font-size: 23px;
+}
+
+#products {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#products h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+#products .brand-name {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#products .brand-name li {
+  list-style: none;
+  padding: 0 10px;
+}
+#products .brand-name li button {
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 15px;
+}
+#products .product-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#products .product-list .product {
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+  text-align: center;
+}
+#products .product-list .product:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+#products .product-list .product img {
+  width: 100%;
+  border-radius: 20px;
+}
+#products .product-list .product h5 {
+  margin-top: 10px;
+  color: #606063;
+  font-size: 12px;
+}
+#products .product-list .product h3 {
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+}
+#products .product-list .product h3:hover {
+  color: hsl(5, 100%, 73%);
+}
+#products .product-list .product h4 {
+  margin-top: 10px;
+  color: hsl(5, 100%, 73%);
+  font-size: 18px;
+}
+
+.banner {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr;
+}
+.banner .banner1 {
+  background-image: url(img/cta-1.jpg);
+}
+.banner .banner2 {
+  background-image: url(img/cta-2.jpg);
+}
+.banner .sm-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+.banner .sm-banner p {
+  color: inherit;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.banner .sm-banner h1 {
+  color: inherit;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+.banner .sm-banner button {
+  color: #fff;
+  border: none;
+}
+.banner .sm-banner button:hover {
+  border-bottom: 1px solid #fff;
+}
+
+#special {
+  display: grid;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  grid-template-columns: 1fr 2fr;
+}
+#special .trend {
+  background-image: url(img/special-banner.jpg);
+  height: 450px;
+  min-width: 300px;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#special .trend h2 {
+  color: #fff;
+  font-size: 20px;
+}
+#special .trend button {
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 8px;
+}
+#special .trend button:hover {
+  border-bottom: 1px solid transparent;
+}
+#special .nike {
+  display: flex;
+  flex-direction: column;
+}
+#special .nike .nike-title {
+  display: flex;
+  margin-left: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+#special .nike .nike-title .line {
+  width: 100%;
+  height: 1px;
+  background: hsl(0, 0%, 88%);
+}
+#special .nike .product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#special .nike .product-list .product {
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  cursor: pointer;
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+  text-align: center;
+}
+#special .nike .product-list .product img {
+  width: 100%;
+}
+#special .nike .product-list .product h5 {
+  margin-top: 10px;
+  color: #606063;
+  font-size: 12px;
+}
+#special .nike .product-list .product h3 {
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+}
+#special .nike .product-list .product h3:hover {
+  color: hsl(5, 100%, 73%);
+}
+#special .nike .product-list .product h4 {
+  margin-top: 10px;
+  color: hsl(5, 100%, 73%);
+  font-size: 18px;
+}
+
+#services .service-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 100px;
+}
+#services .service-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+#services .service-list li .card-icon {
+  background: hsl(5, 100%, 73%);
+  min-width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-right: 15px;
+}
+#services .service-list li .card-icon img {
+  filter: brightness(0) invert(1);
+  width: 60%;
+  height: auto;
+}
+#services .service-list li .service-des {
+  display: flex;
+  flex-direction: column;
+}
+#services .service-list li .service-des h3 {
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+#services .service-list li .service-des p {
+  font-size: 12px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+footer .logo-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .logo-social img {
+  width: 160px;
+  height: 50px;
+}
+footer .logo-social .social a {
+  background-color: hsl(0, 0%, 88%);
+  padding: 10px;
+  color: gray;
+}
+footer .logo-social .social a i {
+  font-size: 20px;
+}
+footer .logo-social .social a:hover {
+  background-color: hsl(5, 100%, 73%);
+  color: #fff;
+}
+footer .footer-des {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+footer .footer-des .row {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-des .row h3 {
+  margin-bottom: 15px;
+}
+footer .footer-des .row p {
+  margin-bottom: 10px;
+}
+footer .footer-des .row a {
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+}
+footer .footer-des .row a:hover {
+  color: hsl(5, 100%, 73%);
+}
+footer .footer-des .row .form {
+  display: flex;
+}
+footer .footer-des .row .form input {
+  height: 3.125rem;
+  padding: 0 1.25em;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid hsl(5, 100%, 73%);
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+footer .footer-des .row .form button {
+  background-color: hsl(5, 100%, 73%);
+  color: #fff;
+  white-space: nowrap;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 0 20px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  font-weight: 300;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+footer .footer-des .row .form button:hover {
+  background-color: hsl(5, 100%, 63%);
+}
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #000;
+  color: #fff;
+}
+footer .copyright span {
+  color: hsl(5, 100%, 73%);
+}
+
+@media (max-width: 799px) {
+  .section-p1 {
+    padding: 40px 20px;
+  }
+  #header #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #FFF;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+  #header #navbar li {
+    margin-bottom: 25px;
+  }
+  #header #navbar #close {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #222;
+    font-size: 24px;
+    display: initial;
+  }
+  #header #navbar .lgbag {
+    display: none;
+  }
+  #header .mobile {
+    display: flex;
+    align-items: center;
+  }
+  #header .mobile i {
+    color: #1a1a1a;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+  #hero {
+    height: 50vh;
+    background-position: left;
+    background-size: cover;
+    padding: 0 100px;
+  }
+  #hero h2 {
+    font-size: 2.5rem;
+  }
+  #hero p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  #collection {
+    gap: 20px;
+  }
+  #collection .card {
+    width: 28%;
+    align-items: center;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #collection .card h3 {
+    font-size: 1.1rem;
+  }
+  #collection .card button.white {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 15px 25px;
+  }
+  #products .product-list {
+    justify-content: center;
+    gap: 30px;
+  }
+}
+@media (max-width: 477px) {
+  #hero {
+    height: 70vh;
+    padding: 0 40px;
+  }
+  #collection .card {
+    width: 100%;
+  }
+  #products h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  #products .product-list .product {
+    width: 100%;
+  }
+  .banner {
+    grid-template-columns: 1fr;
+  }
+  .banner .sm-banner h1 {
+    font-size: 30px;
+  }
+  #services .service-list {
+    justify-content: flex-start;
+    margin: 0 50px;
+  }
+  footer .footer-des .row h3 {
+    margin: 15px 0;
+  }
+}/*# sourceMappingURL=style.css.map */
